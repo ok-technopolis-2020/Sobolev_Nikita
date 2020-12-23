@@ -1,0 +1,51 @@
+.todos-manager {
+    display: flex;
+}
+
+.todo-list-item, .todos-manager {
+    border-bottom: 1px solid var(--todo-border-view-color);
+}
+
+.select-all-todos-button:hover {
+    background-color: var(--todo-item-hover);
+}
+
+.select-all-todos-button {
+    text-indent: -9999px;
+    width: 65px;
+    height: 65px;
+    border: 0;
+    padding: 1px;
+    background: var(--todo-button-background) url(images/arrow.svg) no-repeat center center;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-all-todos-button:focus {
+    border: 1px solid var(--select-all-todos-button-focus);
+    border-radius: 5px;
+    padding: 0;
+}
+
+.add-todo {
+    display: flex;
+    width: 100%;
+}
+
+.add-todo-item-input {
+    font-family: "Roboto-Thin", sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 100;
+    width: 100%;
+    border: 0;
+    padding: 1px;
+    outline: none;
+}
+
+.add-todo-item-input:focus {
+    border: 1px solid var(--select-all-todos-button-focus);
+    border-radius: 5px;
+    padding: 0;
+}
