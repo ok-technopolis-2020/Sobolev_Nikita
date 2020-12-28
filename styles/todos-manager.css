@@ -1,16 +1,15 @@
-.todos-manager {
+.search {
     display: flex;
 }
-
-.todo-list-item, .todos-manager {
+.search {
     border-bottom: 1px solid var(--todo-border-view-color);
 }
 
-.select-all-todos-button:hover {
+.search__select-all-button:hover {
     background-color: var(--todo-item-hover);
 }
 
-.select-all-todos-button {
+.search__select-all-button {
     text-indent: -9999px;
     width: 65px;
     height: 65px;
@@ -22,18 +21,18 @@
     outline: none;
 }
 
-.select-all-todos-button:focus {
+.search__select-all-button:focus {
     border: 1px solid var(--select-all-todos-button-focus);
     border-radius: 5px;
     padding: 0;
 }
 
-.add-todo {
+.search__add-todo {
     display: flex;
     width: 100%;
 }
 
-.add-todo-item-input {
+.search__add-todo-text {
     font-family: "Roboto-Thin", sans-serif;
     font-style: italic;
     font-size: 25px;
@@ -44,7 +43,7 @@
     outline: none;
 }
 
-.add-todo-item-input:focus {
+.search__add-text:focus {
     border: 1px solid var(--select-all-todos-button-focus);
     border-radius: 5px;
     padding: 0;

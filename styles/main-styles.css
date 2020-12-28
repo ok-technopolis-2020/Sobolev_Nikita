@@ -38,29 +38,34 @@ body {
 
 .todo {
     display: flex;
+    position: sticky;
+    left: 0;
     flex-direction: column;
     align-items: center;
-}
-
-main {
-    position: relative;
-    flex-direction: column;
     width: 550px;
-    font-family: "Roboto-Light", sans-serif;
-    color: var(--todo-items-text-color);
-
-    background: var(--main-bachground-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.header .title {
+.header__title {
     font-family: "Roboto-Thin", sans-serif;
     font-size: 100px;
     font-weight: 100;
     color:  var(--todo-header-color);
     line-height: 0;
     cursor: default;
+}
+
+main {
+    position: sticky;
+    bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    font-family: "Roboto-Light", sans-serif;
+    color: var(--todo-items-text-color);
+    background: var(--main-bachground-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 0;
 }
 
 main::after, .action-bar::after {

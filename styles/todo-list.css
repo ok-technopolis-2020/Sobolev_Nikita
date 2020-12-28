@@ -4,58 +4,62 @@
     min-height: 300px;
 }
 
-.todo-list {
+.tasks-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.todo-item-view {
+.task {
     display: flex;
     position: relative;
     align-items: center;
-    height: 2em;
     min-height: 60px;
 }
 
-.todo-item-view:hover {
+.task:hover {
     background: var(--todo-item-hover);
 }
 
-.todo-item-checkbox {
+.task__checkbox {
     position: absolute;
     left: -9999px;
 }
 
-.todo-list-item-text {
+.tasks-list__item {
+    border-bottom: 1px solid var(--todo-border-view-color);
+}
+
+.task__text {
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
     cursor: pointer;
+    overflow-x:hidden;
 }
 
-.todo-list-item-text::before {
+.task__text::before {
     display: inline-block;
     content: '';
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 1em;
+    min-width: 39px;
+    min-height: 39px;
+    border-radius: 26px;
     border: 1px solid var(--todo-item-checkbox-border-color);
     margin: 0 0.5em 0 0.5em;
 }
 
-.todo-item-checkbox:checked ~ .todo-list-item-text {
+.task__checkbox:checked ~ .task__text {
     color: var(--checked-todo-list-item-text);
     text-decoration-line: line-through;
 }
 
-.todo-item-checkbox:checked + .todo-list-item-text::before {
+.task__checkbox:checked + .task__text::before {
     background: url(images/check-mark.svg) no-repeat center center;
     border: 1px solid var(--checked-todo-item-checkbox);
 }
 
-.todo-item-delete-button {
+.task__delete-button {
     position: absolute;
     right: 0;
     width: 10%;
@@ -69,15 +73,15 @@
     outline: none;
 }
 
-.todo-item-delete-button:hover {
+.task__delete-button:hover {
     background-color: var(--todo-item-delete-button-hover);
 }
 
-.todo-item-delete-button:focus {
+.task__delete-button:focus {
     border: 1px solid var(--select-all-todos-button-focus);
     border-radius: 5px;
 }
 
-.todo-item-view:hover .todo-item-delete-button {
+.task:hover .task__delete-button {
     opacity: 10;
 }

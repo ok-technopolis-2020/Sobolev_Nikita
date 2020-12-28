@@ -1,9 +1,3 @@
-.action-bar, .clear-completed-todos-button {
-    align-items: center;
-    font-weight: 500;
-    font-size: 15px;
-}
-
 .action-bar {
     display: flex;
     position: relative;
@@ -12,47 +6,53 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.item-counter {
+.action-bar, .action-bar__clear-completed-button {
+    align-items: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.action-bar__counter {
     cursor: default;
 }
 
-.action-bar-item:nth-child(1) {
+.item-counter {
     position: absolute;
     left: 0;
     padding-left: 10px;
 }
 
-.action-bar-item:nth-child(2) {
+.item-filter {
     margin-left: auto;
     margin-right: auto;
 }
 
-.action-bar-item:nth-child(3) {
+.item-clear-completed-button {
     position: absolute;
     right: 0;
     padding-right: 10px;
 }
 
-.filter-todos {
-    position: fixed;
+.task-filter__radio {
+    position: absolute;
     left: -9999px;
 }
 
-.todo-filter-item-text {
+.task-filter__text {
     padding: 5px;
 }
 
-.filter-todos:checked + .todo-filter-item-text {
+.task-filter__radio:checked + .task-filter__text {
     border: 1px solid var(--todo-border-view-color);
     border-radius: 5px;
     padding: 4px;
 }
 
-.clear-completed-todos-button, .todo-filter-item, .todo-filter-item-text {
+.action-bar__clear-completed-button, .task-filter__item, .task-filter__text {
     cursor: pointer;
 }
 
-.clear-completed-todos-button {
+.action-bar__clear-completed-button {
     border: 0;
     padding: 5px;
     background: var(--todo-button-background);
@@ -62,11 +62,11 @@
     outline: none;
 }
 
-.clear-completed-todos-button:hover {
+.task-filter__text:hover, .action-bar__clear-completed-button:hover {
     background-color: var(--todo-item-hover);
 }
 
-.clear-completed-todos-button:focus {
+.action-bar__clear-completed-button:focus {
     border: 1px solid var(--select-all-todos-button-focus);
     border-radius: 5px;
     padding: 4px;
